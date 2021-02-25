@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+<h2 align="center">
+  <img alt="GitHub Language Count" src="./src/img/parMais.png" />
+ <b>Challenge - ParMais Chuck Norris Joker</b> 
+</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/leandross86/challenge_ChuckNorris_Jokes" />
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/leandross86/challenge_ChuckNorris_Jokes" />
+  <img alt="" src="https://img.shields.io/github/repo-size/leandross86/challenge_ChuckNorris_Jokes" />
+  <img alt="Standard - JavaScript Style Guide" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" />
 
-## Available Scripts
+  <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/leandross86/challenge_ChuckNorris_Jokes" />
+  <img alt="Github License" src="https://img.shields.io/github/license/leandross86/challenge_ChuckNorris_Jokes" />
+  <img alt="Github Star" src="https://img.shields.io/github/stars/leandross86/challenge_ChuckNorris_Jokes?style=social" />
+</p>
 
-In the project directory, you can run:
 
-### `yarn start`
+## Objetivo
+Uma aplicação web consumindo uma API.
+Nessa aplicação vamos consumir a API do [Chuck Norris](https://api.chucknorris.io/) e interagir em uma interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Instalação:
 
-### `yarn test`
+Você precisará ter apenas o [NodeJS](https://nodejs.org) instalado na sua máquina, e após isso, clonar este repositório:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+git clone https://github.com/leandross86/challenge_ChuckNorris_Jokes.git
 
-### `yarn build`
+```
+Depois disso acesse o diretório e instale as dependências executando o seguinte comando:
+```bash
+cd challenge_ChuckNorris_Jokes
+yarn install # ou npm install
+```
+### Execute a aplicação:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Execute o comando a baixo para inicializar:
+```sh
+  $ yarn start # ou npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Testes a aplicação
+Estes teste consiste em testar a redenrização dos componentes. É necessário a aplicação estar em execução para executar os testes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+yarn test
+```
+```
+yarn test--coverage
+```
+## Licença
 
-### `yarn eject`
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+Desenvolvido com ❤ por Leandro Souza

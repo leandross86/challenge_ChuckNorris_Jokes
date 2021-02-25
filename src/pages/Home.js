@@ -48,10 +48,11 @@ function Home({ onClick }) {
   const [jokeValue, setJokeValue] = useState('')
   const [jokeCategory, setJokeCategory] = useState('')
   const [listCategories, setListCategories] = useState('')
+  const [query, setQuery] = useState('')
   const [load, setLoad] = useState(false)
 
   const handleChange = (event) => {
-    setListCategories()
+    setJokeValue(event.target.value)
   }
 
   const handleSearch = (event) => {
@@ -80,6 +81,15 @@ function Home({ onClick }) {
     )
   }, [listCategories])
 
+  useEffect(() => {
+    api.get(`jokes/search?query=${query}`).then(
+      response => {
+        setQuery(response.data)
+        // console.log(response.data)
+      }
+    )
+  }, [query])
+
   
   return (
     <div className='container'>
@@ -92,7 +102,7 @@ function Home({ onClick }) {
           <Input 
             type="text"
             value={jokeValue}
-            onChange={handleSearch}
+            onChange={handleChange}
             placeholder="Search"
             className={classes.inputEmpty}
           />
@@ -121,6 +131,7 @@ function Home({ onClick }) {
           >
             Pesquisar
           </Button>
+
         {!load ? jokes.map((joke, index) => (
           <div className='box-container'>
             <div
