@@ -29,24 +29,26 @@ git clone https://github.com/leandross86/challenge_ChuckNorris_Jokes.git
 
 ```
 Depois disso acesse o diretório e instale as dependências executando o seguinte comando:
-```bash
+```zsh
 cd challenge_ChuckNorris_Jokes
+```
+```zsh
 yarn install # ou npm install
 ```
-### Execute a aplicação:
+### Execução:
 
-Execute o comando a baixo para inicializar:
-```sh
+Execute o comando abaixo para inicializar:
+```zsh
   $ yarn start # ou npm start
 ```
 
-### Testes a aplicação
+### Testes
 Estes teste consiste em testar a redenrização dos componentes. É necessário a aplicação estar em execução para executar os testes.
 
-```sh
+```zsh
 yarn test
 ```
-```
+```zsh
 yarn test--coverage
 ```
 ## Licença

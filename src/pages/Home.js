@@ -95,7 +95,7 @@ function Home({ onClick }) {
     <div className='container'>
       <div className='title'>
         <img src={logo}alt="Logo ParMais"/>
-        <h1>ParMais - Desafio ChuckNorris</h1>
+        <h1>ParMais - Challenge ChuckNorris Joker</h1>
       </div>
       <div className='content'>
         <div className='search-content'>
@@ -110,7 +110,7 @@ function Home({ onClick }) {
             <InputLabel className={classes.inputLabeForm} id="demo-mutiple-name-label">Categories</InputLabel>
             <Select
               value={jokeCategory}
-              onChange={handleChange}
+              onChange={handleSearch}
               displayEmpty
               className={classes.selectEmpty}
               inputProps={{ 'Mulish': 'Without label' }}
