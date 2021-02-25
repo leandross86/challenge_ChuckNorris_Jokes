@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #FFF;
+  --background: #E5E5E5;
+  --green_background: #DAF1F2;
+  --green: #25EFA1;
+  --text: #20232D;
+  --turquoise: #48CCCC;
+  --box_btn: rgba(0, 204, 126, 0.25)
+}
+
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font: 400 1rem 'Mulish', sans-serif;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 10vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+}
+
+.btn-container button {
+  cursor: pointer;
+  height: 2.8rem;
+  width: 16rem;
+  background: var(--green);
+  border: 5 solid var(--turquoise);
+  box-shadow: 0px 3px 5px var(--box_btn);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font: 700 1rem 'Mulish', sans-serif;
+  color: var(--text);
+  text-align: center;
+}
+
+.btn-container button:hover {
+  background: var(--turquoise);
+}
+
+
+.title {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.content {
+  margin-top: 4rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container-load {
+  display: flex;
+  align-items: center;
+  margin-left: 12rem;
+  margin-bottom: 2rem;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-container div {
+  height: 11rem;
+  width: 38rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 12px rgba(62, 69, 87, 0.25);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1.5rem;
+}
