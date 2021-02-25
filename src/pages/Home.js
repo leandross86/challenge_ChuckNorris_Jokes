@@ -56,7 +56,7 @@ function Home({ onClick }) {
   }
 
   const handleSearch = (event) => {
-    setJokeValue(event.target.value)
+    setListCategories(event.target.value)
   }
 
 
