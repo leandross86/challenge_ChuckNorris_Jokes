@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { Input, MenuItem, FormControl, Select, Box } from '@material-ui/core'
+import { Input, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core'
 
 
 import api from '../service/api'
@@ -20,11 +20,15 @@ const useStyles = makeStyles((theme) => ({
   },
   inputEmpty: {
     marginTop: theme.spacing(3.3),
-    marginLeft: theme.spacing(2),
     minWidth: 296,
     marginRight: 16,
     fontSize: 14,
     fontWeight: 400,
+  },
+  inputLabeForm: {
+    fontSize: 14,
+    marginLeft: theme.spacing(2),
+    
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -47,7 +51,7 @@ function Home({ onClick }) {
   const [load, setLoad] = useState(false)
 
   const handleChange = (event) => {
-    setListCategories(event.target.value)
+    setListCategories()
   }
 
   const handleSearch = (event) => {
@@ -61,6 +65,7 @@ function Home({ onClick }) {
       res => {
         setJokes(res.data.result)
         setLoad(false)
+        setJokeValue('')
         console.log(res.data)
       },
     )
@@ -70,10 +75,12 @@ function Home({ onClick }) {
     api.get(`jokes/categories`).then(
       response => {
         setListCategories(response.data)
+        // console.log(response.data)
       }
     )
   }, [listCategories])
 
+  
   return (
     <div className='container'>
       <div className='title'>
@@ -90,6 +97,7 @@ function Home({ onClick }) {
             className={classes.inputEmpty}
           />
           <FormControl className={classes.formControl}>
+            <InputLabel className={classes.inputLabeForm} id="demo-mutiple-name-label">Categories</InputLabel>
             <Select
               value={jokeCategory}
               onChange={handleChange}
@@ -97,25 +105,13 @@ function Home({ onClick }) {
               className={classes.selectEmpty}
               inputProps={{ 'Mulish': 'Without label' }}
             >
-              <MenuItem value="" disabled>
-                Any
-              </MenuItem>
-              <MenuItem value={listCategories}>{listCategories[0]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[1]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[2]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[3]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[4]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[5]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[6]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[7]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[8]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[9]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[10]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[11]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[12]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[13]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[14]}</MenuItem>
-              <MenuItem value={listCategories}>{listCategories[15]}</MenuItem>
+              <MenuItem value="Any"> Any </MenuItem>
+              { listCategories
+               ? listCategories.map(listCategory => (
+                 <MenuItem value={listCategories}>{listCategory}</MenuItem>
+              )) 
+                : null
+              }
             </Select>
           </FormControl>
         </div>
@@ -130,7 +126,6 @@ function Home({ onClick }) {
             <div
               key={index}
             >
-              {/* <img src={joke.icon_url} alt={joke.value}/> */}
               {joke.value}
             </div>
           </div>

@@ -18,11 +18,36 @@
   html {
     font-size: 93.75%;
   }
+  img {
+    position: unset;
+    top: unset;
+    left: unset;
+    margin: auto;
+  }
 }
 
 @media(max-width: 720px) {
   html {
     font-size: 87.5%;
+    align-items: center;
+  }
+  img {
+    position: unset;
+    top: unset;
+    left: unset;
+    margin: 0.1 auto;
+  }
+}
+
+@media(max-width: 425px) {
+  html {
+    font-size: 87.5%;
+  }
+  img {
+    position: unset;
+    top: unset;
+    left: unset;
+    margin: 0.1 auto;
   }
 }
 
@@ -32,11 +57,6 @@ body {
   font: 400 1rem 'Mulish', sans-serif;
 }
 
-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .container {
   height: 10vh;
@@ -95,9 +115,8 @@ img {
 .container-load {
   display: flex;
   align-items: center;
-  margin-left: 12rem;
-  margin-bottom: 2rem;
 }
+
 
 .box-container {
   display: flex;
